@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplo de Cookies - Tema Claro / Escuro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Demonstração didática</p>
+        <h1>Preferência de tema guardada em cookie</h1>
+        <p class="hero-copy">Escolha entre o modo claro e escuro e mantenha a preferência ativa mesmo após fechar o navegador.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="card-grid">
+        <div>
+          <h2>Configurar o tema</h2>
+          <p>O cookie <code>themeMode</code> armazena a preferência do usuário por 30 dias. A página aplica o tema automaticamente no carregamento.</p>
+
+          <div class="theme-selector" role="group" aria-label="Selecionar tema">
+            <button type="button" class="theme-option" data-theme="light">Claro</button>
+            <button type="button" class="theme-option" data-theme="dark">Escuro</button>
+          </div>
+        </div>
+
+        <aside class="status-panel">
+          <span class="status-title">Tema atual</span>
+          <strong id="currentTheme" class="status-value">Carregando…</strong>
+          <p class="status-copy">O cookie expira em 30 dias e garante que o estilo escolhido seja reaplicado automaticamente.</p>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
