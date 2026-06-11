@@ -1,221 +1,221 @@
-:root {
-  color-scheme: light;
-  --bg: #f5f7fb;
-  --surface: #ffffff;
-  --surface-soft: #f2f6fb;
-  --text: #1e293b;
-  --muted: #475569;
-  --accent: #2563eb;
-  --accent-soft: #dbeafe;
-  --border: rgba(15, 23, 42, 0.08);
-  --shadow: 0 24px 80px rgba(30, 41, 59, 0.08);
+:root { /* define variáveis do tema claro */
+  color-scheme: light; /* informa ao navegador que o esquema de cores é claro */
+  --bg: #f5f7fb; /* cor de fundo principal */
+  --surface: #ffffff; /* cor de superfície dos blocos */
+  --surface-soft: #f2f6fb; /* cor suave para elementos secundários */
+  --text: #1e293b; /* cor do texto principal */
+  --muted: #475569; /* cor de texto secundário */
+  --accent: #2563eb; /* cor de destaque */
+  --accent-soft: #dbeafe; /* cor de destaque suave */
+  --border: rgba(15, 23, 42, 0.08); /* cor da borda dos elementos */
+  --shadow: 0 24px 80px rgba(30, 41, 59, 0.08); /* sombra padrão */
 }
 
-body.dark {
-  color-scheme: dark;
-  --bg: #090b14;
-  --surface: #111827;
-  --surface-soft: #141c2d;
-  --text: #f8fafc;
-  --muted: #d1d5db;
-  --accent: #60a5fa;
-  --accent-soft: rgba(96, 165, 250, 0.16);
-  --border: rgba(148, 163, 184, 0.15);
-  --shadow: 0 24px 90px rgba(0, 0, 0, 0.32);
+body.dark { /* ajusta variáveis para o tema escuro */
+  color-scheme: dark; /* informa ao navegador que o esquema de cores é escuro */
+  --bg: #090b14; /* cor de fundo escura */
+  --surface: #111827; /* superfície do cartão escura */
+  --surface-soft: #141c2d; /* superfície suave escura */
+  --text: #f8fafc; /* cor de texto claro */
+  --muted: #d1d5db; /* texto secundário claro */
+  --accent: #60a5fa; /* cor de destaque clara */
+  --accent-soft: rgba(96, 165, 250, 0.16); /* destaque suave no escuro */
+  --border: rgba(148, 163, 184, 0.15); /* borda suave no escuro */
+  --shadow: 0 24px 90px rgba(0, 0, 0, 0.32); /* sombra mais intensa */
 }
 
-* {
-  box-sizing: border-box;
+* { /* regra global para todos os elementos */
+  box-sizing: border-box; /* inclui padding e borda nas dimensões do elemento */
 }
 
-html {
-  scroll-behavior: smooth;
+html { /* estilo do elemento raiz */
+  scroll-behavior: smooth; /* ativa rolagem suave */
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 22%),
-    radial-gradient(circle at 20% 10%, rgba(59, 130, 246, 0.18), transparent 14%),
-    radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.1), transparent 18%),
-    radial-gradient(circle at 50% 120%, rgba(168, 85, 247, 0.14), transparent 14%),
-    var(--bg);
-  color: var(--text);
+body { /* estilo do corpo da página */
+  margin: 0; /* remove a margem padrão */
+  min-height: 100vh; /* garante altura mínima de tela cheia */
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* define a família tipográfica */
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 22%), /* gradiente de canto superior esquerdo */
+    radial-gradient(circle at 20% 10%, rgba(59, 130, 246, 0.18), transparent 14%), /* segundo gradiente suave */
+    radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.1), transparent 18%), /* terceiro gradiente suave */
+    radial-gradient(circle at 50% 120%, rgba(168, 85, 247, 0.14), transparent 14%), /* quarto gradiente colorido */
+    var(--bg); /* cor base de fundo */
+  color: var(--text); /* usa a cor de texto definida pela variável */
 }
 
-.app-shell {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+.app-shell { /* contêiner principal que centraliza o conteúdo */
+  max-width: 960px; /* largura máxima do layout */
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 3rem 1.5rem; /* espaçamento interno */
 }
 
-.hero {
-  padding: 2.2rem 2.25rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(237, 242, 247, 0.95));
-  border: 1px solid rgba(59, 130, 246, 0.18);
-  border-radius: 28px;
-  box-shadow: 0 32px 90px rgba(15, 23, 42, 0.08);
-  margin-bottom: 2rem;
+.hero { /* cartão de destaque no topo da página */
+  padding: 2.2rem 2.25rem; /* espaçamento interno */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(237, 242, 247, 0.95)); /* fundo degradê suave */
+  border: 1px solid rgba(59, 130, 246, 0.18); /* borda leve azul clara */
+  border-radius: 28px; /* cantos arredondados */
+  box-shadow: 0 32px 90px rgba(15, 23, 42, 0.08); /* sombra para profundidade */
+  margin-bottom: 2rem; /* espaço abaixo do hero */
 }
 
-body.dark .hero {
-  background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(17, 24, 39, 0.92));
-  border-color: rgba(96, 165, 250, 0.18);
+body.dark .hero { /* estilo do hero no modo escuro */
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(17, 24, 39, 0.92)); /* fundo escuro degradê */
+  border-color: rgba(96, 165, 250, 0.18); /* borda azul suave no escuro */
 }
 
-.eyebrow {
-  display: inline-flex;
-  margin-bottom: 0.75rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(37, 99, 235, 0.15), rgba(168, 85, 247, 0.18));
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.eyebrow { /* rótulo pequeno acima do título */
+  display: inline-flex; /* exibe em linha com flexbox */
+  margin-bottom: 0.75rem; /* espaçamento abaixo do rótulo */
+  padding: 0.35rem 0.85rem; /* espaçamento interno */
+  border-radius: 999px; /* forma de pílula */
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.15), rgba(168, 85, 247, 0.18)); /* fundo degradê */
+  color: var(--accent); /* cor do texto */
+  font-size: 0.85rem; /* tamanho de fonte menor */
+  font-weight: 700; /* negrito */
+  text-transform: uppercase; /* deixa o texto em maiúsculas */
+  letter-spacing: 0.08em; /* espaçamento entre letras */
 }
 
-.hero h1 {
-  position: relative;
-  margin: 0;
-  font-size: clamp(2rem, 2.4vw, 2.8rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+.hero h1 { /* estilo do título principal */
+  position: relative; /* necessário para o pseudo-elemento decorativo */
+  margin: 0; /* remove margem padrão */
+  font-size: clamp(2rem, 2.4vw, 2.8rem); /* tamanho responsivo */
+  line-height: 1.05; /* altura da linha */
+  letter-spacing: -0.03em; /* ajuste fino de espaçamento de letras */
 }
 
-.hero h1::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -0.5rem;
-  width: 4rem;
-  height: 0.35rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #38bdf8, #818cf8, #a855f7);
+.hero h1::after { /* linha decorativa abaixo do título */
+  content: ''; /* cria o pseudo-elemento vazio */
+  position: absolute; /* posiciona em relação ao título */
+  left: 0; /* alinha à esquerda */
+  bottom: -0.5rem; /* posiciona logo abaixo do texto */
+  width: 4rem; /* largura da linha */
+  height: 0.35rem; /* altura fina da linha */
+  border-radius: 999px; /* extremidades arredondadas */
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #a855f7); /* gradiente colorido */
 }
 
-.hero-copy {
-  margin: 1.1rem 0 0;
-  max-width: 44rem;
-  color: var(--muted);
-  line-height: 1.75;
+.hero-copy { /* parágrafo de apoio do hero */
+  margin: 1.1rem 0 0; /* distância acima do parágrafo */
+  max-width: 44rem; /* largura máxima para leitura confortável */
+  color: var(--muted); /* usa cor secundária */
+  line-height: 1.75; /* altura da linha legível */
 }
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
+.card { /* cartão principal do conteúdo */
+  background: var(--surface); /* fundo do cartão */
+  border: 1px solid var(--border); /* borda do cartão */
+  border-radius: 28px; /* cantos arredondados */
+  box-shadow: var(--shadow); /* sombra do cartão */
+  overflow: hidden; /* evita que o conteúdo ultrapasse os cantos arredondados */
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 2px;
+.card-grid { /* layout em grade dentro do card */
+  display: grid; /* ativa modo grid */
+  grid-template-columns: 1.5fr 1fr; /* define duas colunas com proporção */
+  gap: 2px; /* separação entre as colunas */
 }
 
-.card-grid > * {
-  padding: 2rem;
-  background: var(--surface);
+.card-grid > * { /* estilo para cada item direto da grade */
+  padding: 2rem; /* espaçamento interno */
+  background: var(--surface); /* mantém o fundo consistente */
 }
 
-.card-grid h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
+.card-grid h2 { /* subtítulo dentro da grade */
+  margin-top: 0; /* remove margem superior */
+  font-size: 1.5rem; /* tamanho do texto */
 }
 
-.card-grid p {
-  color: var(--muted);
-  line-height: 1.8;
+.card-grid p { /* parágrafos dentro da grade */
+  color: var(--muted); /* cor do texto secundário */
+  line-height: 1.8; /* altura da linha confortável */
 }
 
-.theme-selector {
-  display: inline-flex;
-  gap: 0.75rem;
-  margin-top: 1.8rem;
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.12), rgba(168, 85, 247, 0.12));
-  border: 1px solid rgba(37, 99, 235, 0.12);
-  padding: 0.6rem;
-  border-radius: 999px;
+.theme-selector { /* invólucro dos botões de tema */
+  display: inline-flex; /* exibe os botões em linha */
+  gap: 0.75rem; /* espaço entre os botões */
+  margin-top: 1.8rem; /* distância acima do selector */
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.12), rgba(168, 85, 247, 0.12)); /* fundo suave */
+  border: 1px solid rgba(37, 99, 235, 0.12); /* borda leve */
+  padding: 0.6rem; /* espaçamento interno */
+  border-radius: 999px; /* formato arredondado */
 }
 
-.theme-option {
-  border: none;
-  background: transparent;
-  color: var(--text);
-  padding: 0.95rem 1.4rem;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+.theme-option { /* estilo dos botões de tema */
+  border: none; /* remove a borda padrão */
+  background: transparent; /* fundo transparente */
+  color: var(--text); /* cor do texto do botão */
+  padding: 0.95rem 1.4rem; /* espaçamento interno do botão */
+  border-radius: 999px; /* cantos arredondados */
+  cursor: pointer; /* mostra que é clicável */
+  font-weight: 600; /* peso do texto */
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; /* animações suaves */
 }
 
 .theme-option:hover,
-.theme-option:focus-visible {
-  transform: translateY(-1px);
-  outline: none;
-  background: rgba(59, 130, 246, 0.12);
+.theme-option:focus-visible { /* estilo de hover e foco */
+  transform: translateY(-1px); /* eleva levemente o botão */
+  outline: none; /* remove o contorno padrão */
+  background: rgba(59, 130, 246, 0.12); /* realce suave ao passar o mouse */
 }
 
-.theme-option.active {
-  background: linear-gradient(135deg, #22d3ee, #818cf8);
-  color: #f8fafc;
-  box-shadow: 0 18px 35px rgba(56, 189, 248, 0.2);
+.theme-option.active { /* botão ativo selecionado */
+  background: linear-gradient(135deg, #22d3ee, #818cf8); /* fundo degradê */
+  color: #f8fafc; /* texto claro no botão ativo */
+  box-shadow: 0 18px 35px rgba(56, 189, 248, 0.2); /* sombra para destacar */
 }
 
-.status-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.25rem;
-  border-left: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(59, 130, 246, 0.08), rgba(168, 85, 247, 0.08));
+.status-panel { /* painel lateral com status */
+  display: flex; /* ativa flexbox */
+  flex-direction: column; /* empilha verticalmente */
+  justify-content: center; /* centraliza os itens verticalmente */
+  gap: 1.25rem; /* espaço entre os elementos */
+  border-left: 1px solid var(--border); /* borda esquerda separadora */
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.08), rgba(168, 85, 247, 0.08)); /* fundo suave */
 }
 
-.status-title {
-  display: block;
-  font-size: 0.95rem;
-  color: var(--muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.status-title { /* estilo do texto de título do status */
+  display: block; /* exibe em bloco */
+  font-size: 0.95rem; /* tamanho de fonte reduzido */
+  color: var(--muted); /* cor secundária */
+  letter-spacing: 0.08em; /* espaçamento entre letras */
+  text-transform: uppercase; /* transforma em maiúsculas */
 }
 
-.status-value {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3rem;
-  width: 100%;
-  border-radius: 18px;
-  background: var(--surface-soft);
-  padding: 0 1rem;
-  font-size: 1.2rem;
+.status-value { /* caixa do valor do status */
+  display: inline-flex; /* exibe em linha com flexbox */
+  align-items: center; /* alinha verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  min-height: 3rem; /* altura mínima */
+  width: 100%; /* ocupa toda a largura disponível */
+  border-radius: 18px; /* cantos arredondados */
+  background: var(--surface-soft); /* fundo suave */
+  padding: 0 1rem; /* espaçamento interno horizontal */
+  font-size: 1.2rem; /* tamanho de fonte maior */
 }
 
-.status-copy {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.75;
+.status-copy { /* texto explicativo no painel de status */
+  margin: 0; /* remove margem padrão */
+  color: var(--muted); /* cor secundária */
+  line-height: 1.75; /* altura da linha confortável */
 }
 
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  background: rgba(148, 163, 184, 0.12);
-  color: var(--text);
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.45rem;
+code { /* estilo para texto em formato de código */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* fonte monoespaçada */
+  background: rgba(148, 163, 184, 0.12); /* fundo suave para o código */
+  color: var(--text); /* cor do texto dentro do código */
+  padding: 0.2rem 0.4rem; /* espaçamento interno do código */
+  border-radius: 0.45rem; /* cantos levemente arredondados */
 }
 
-@media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) { /* regras para telas pequenas */
+  .card-grid { /* ajusta a grade para uma coluna */
+    grid-template-columns: 1fr; /* usa apenas uma coluna */
   }
 
-  .status-panel {
-    border-left: none;
-    border-top: 1px solid var(--border);
+  .status-panel { /* ajusta o painel de status em mobile */
+    border-left: none; /* remove a borda esquerda */
+    border-top: 1px solid var(--border); /* adiciona borda superior */
   }
 }

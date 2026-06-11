@@ -1,42 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exemplo de Cookies - Tema Claro / Escuro</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="app-shell">
-    <header class="hero">
-      <div>
-        <p class="eyebrow">Demonstração didática</p>
-        <h1>Preferência de tema guardada em cookie</h1>
-        <p class="hero-copy">Escolha entre o modo claro e escuro e mantenha a preferência ativa mesmo após fechar o navegador.</p>
-      </div>
-    </header>
+<!DOCTYPE html> <!-- define o tipo do documento HTML -->
+<html lang="pt-BR"> <!-- abre o elemento raiz da página com idioma português -->
+<head> <!-- começa a seção de metadados e links de recursos -->
+  <meta charset="UTF-8" /> <!-- define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- habilita o layout responsivo em dispositivos móveis -->
+  <title>Exemplo de Cookies - Tema Claro / Escuro</title> <!-- define o título exibido na aba do navegador -->
+  <link rel="stylesheet" href="styles.css" /> <!-- importa o arquivo CSS para estilizar a página -->
+</head> <!-- finaliza a seção de metadados -->
+<body> <!-- inicia o corpo da página onde o conteúdo visível ficará -->
+  <div class="app-shell"> <!-- contêiner principal que centraliza o conteúdo -->
+    <header class="hero"> <!-- seção de destaque com título e descrição -->
+      <div> <!-- envoltório para o conteúdo do hero -->
+        <p class="eyebrow">Demonstração didática</p> <!-- texto pequeno acima do título -->
+        <h1>Preferência de tema guardada em cookie</h1> <!-- título principal da página -->
+        <p class="hero-copy">Escolha entre o modo claro e escuro e mantenha a preferência ativa mesmo após fechar o navegador.</p> <!-- descrição explicando o propósito da página -->
+      </div> <!-- fecha o envoltório do hero -->
+    </header> <!-- fecha a seção de destaque -->
 
-    <section class="card">
-      <div class="card-grid">
-        <div>
-          <h2>Configurar o tema</h2>
-          <p>O cookie <code>themeMode</code> armazena a preferência do usuário por 30 dias. A página aplica o tema automaticamente no carregamento.</p>
+    <section class="card"> <!-- bloco que agrupa controles e status em uma caixa -->
+      <div class="card-grid"> <!-- layout em grade para separar conteúdo e status -->
+        <div> <!-- coluna principal com as instruções -->
+          <h2>Configurar o tema</h2> <!-- subtítulo da seção de controles -->
+          <p>O cookie <code>themeMode</code> armazena a preferência do usuário por 30 dias. A página aplica o tema automaticamente no carregamento.</p> <!-- explica o funcionamento dos cookies -->
 
-          <div class="theme-selector" role="group" aria-label="Selecionar tema">
-            <button type="button" class="theme-option" data-theme="light">Claro</button>
-            <button type="button" class="theme-option" data-theme="dark">Escuro</button>
-          </div>
-        </div>
+          <div class="theme-selector" role="group" aria-label="Selecionar tema"> <!-- área com botões de seleção de tema -->
+            <button type="button" class="theme-option" data-theme="light">Claro</button> <!-- botão para escolher tema claro -->
+            <button type="button" class="theme-option" data-theme="dark">Escuro</button> <!-- botão para escolher tema escuro -->
+          </div> <!-- fecha o seletor de tema -->
+        </div> <!-- fecha a coluna principal -->
 
-        <aside class="status-panel">
-          <span class="status-title">Tema atual</span>
-          <strong id="currentTheme" class="status-value">Carregando…</strong>
-          <p class="status-copy">O cookie expira em 30 dias e garante que o estilo escolhido seja reaplicado automaticamente.</p>
-        </aside>
-      </div>
-    </section>
-  </div>
+        <aside class="status-panel"> <!-- painel lateral mostrando o tema atual -->
+          <span class="status-title">Tema atual</span> <!-- rótulo do status atual -->
+          <strong id="currentTheme" class="status-value">Carregando…</strong> <!-- valor exibido do tema selecionado -->
+          <p class="status-copy">O cookie expira em 30 dias e garante que o estilo escolhido seja reaplicado automaticamente.</p> <!-- texto explicativo sobre persistência -->
+        </aside> <!-- fecha o painel de status -->
+      </div> <!-- fecha a grade do card -->
+    </section> <!-- fecha a seção do card -->
+  </div> <!-- fecha o contêiner principal -->
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <script src="script.js"></script> <!-- importa o JavaScript de controle de tema -->
+</body> <!-- fecha o corpo da página -->
+</html> <!-- fecha o documento HTML -->
